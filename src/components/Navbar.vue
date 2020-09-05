@@ -1,6 +1,6 @@
 <template>
   <b-navbar type="dark" variant="info">
-    <b-navbar-brand class="mk" href="#">NavBar</b-navbar-brand>
+    <b-navbar-brand class="mk" href="#">Workout</b-navbar-brand>
 
     <b-navbar-nav class="ml-auto">
       <router-link tag="b-nav-item" to="/" exact active-class="active">Home</router-link>
