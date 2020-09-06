@@ -29,6 +29,9 @@
         <div class="invalid-message" v-if="$v.password.$dirty && !$v.password.required">
           Это обязательное поле.
         </div>
+        <div class="invalid-message" v-if="$v.password.$dirty && !$v.password.minLength">
+          Минимальная длина 6 символов.
+        </div>
       </b-form-group>
       <b-form-row class="card-action">
         <b-col>
@@ -42,7 +45,9 @@
 </template>
 
 <script>
-import { required, email } from 'vuelidate/lib/validators'
+import { required, email, minLength } from 'vuelidate/lib/validators'
+import messages from '../utils/messages'
+
   export default {
     data() {
       return {
@@ -64,7 +69,13 @@ import { required, email } from 'vuelidate/lib/validators'
             email
         },
         password: {
-            required
+            required,
+            minLength: minLength(6)
+        }
+    },
+    mounted() { // если в файлах об ошибках есть logout, то выводим в плагине
+        if (messages[this.$route.query.message]) {
+          this.$message(messages[this.$route.query.message])
         }
     }
   }

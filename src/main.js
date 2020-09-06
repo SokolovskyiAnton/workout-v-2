@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import Vuelidate from 'vuelidate'
 import { BootstrapVue } from 'bootstrap-vue'
+import messagePlugin from './utils/message.plugin'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
@@ -13,6 +14,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.use(BootstrapVue)
 Vue.use(Vuelidate)
+Vue.use(messagePlugin)
 
 Vue.config.productionTip = false
 

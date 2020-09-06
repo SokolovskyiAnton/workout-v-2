@@ -19,7 +19,9 @@
       }
     },
     methods: {
-      logout() {}
+      logout() {
+        this.$router.push('/login?message=logout')
+      }
     }
   }
 </script>
