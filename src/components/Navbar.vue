@@ -6,6 +6,7 @@
       <router-link tag="b-nav-item" to="/" exact active-class="active">Home</router-link>
       <router-link tag="b-nav-item" to="/list" active-class="active">List</router-link>
       <router-link tag="b-nav-item" to="/analytics" active-class="active">Analytics</router-link>
+      <li class="nav-item"><a class="nav-link" @click.prevent="logout">Log out</a></li>
 
     </b-navbar-nav>
   </b-navbar>
@@ -16,6 +17,9 @@
     data() {
       return {
       }
+    },
+    methods: {
+      logout() {}
     }
   }
 </script>
