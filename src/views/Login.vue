@@ -56,11 +56,20 @@ import messages from '../utils/messages'
       }
     },
     methods: {
-        onSubmit() {
+        async onSubmit() {
           if (this.$v.$invalid) {
             this.$v.$touch()
             return
           }
+          const obj = {
+            email: this.email,
+            password: this.password,
+          }
+
+          try {
+            await this.$store.dispatch('login', obj)
+            this.$router.push('/')
+          } catch (e) {}
         }
     },
     validations: {

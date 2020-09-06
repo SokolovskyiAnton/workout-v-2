@@ -13,6 +13,7 @@ import messages from '../utils/messages'
     },
     computed: {
         error() {
+          return this.$store.getters.error
         }
     },
     watch: {

@@ -68,11 +68,22 @@ import { required, email, minLength } from 'vuelidate/lib/validators'
       }
     },
     methods: {
-        onSubmit() {
+        async onSubmit() {
           if (this.$v.$invalid) {
                 this.$v.$touch()
                 return
           }
+
+          const obj = {
+            email: this.email,
+            password: this.password,
+            name: this.name
+          }
+
+          try {
+            await this.$store.dispatch('register', obj)
+            this.$router.push('/')
+          } catch (e) {}
         }
     },
     validations: {
