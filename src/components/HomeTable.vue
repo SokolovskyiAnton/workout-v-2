@@ -67,9 +67,9 @@
                             <span>Понедельник</span>
                         </div>
                         <div class="wrap-info">
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
+                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="secondWeek.monday.firstDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="secondWeek.monday.secondDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="secondWeek.monday.thirdDay" max="1000"></div>
                         </div>
                     </div>
                 </div>
@@ -79,9 +79,9 @@
                             <span>Среда</span>
                         </div>
                         <div class="wrap-info">
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
+                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="secondWeek.wednesday.firstDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="secondWeek.wednesday.secondDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="secondWeek.wednesday.thirdDay" max="1000"></div>
                         </div>
                     </div>
                 </div>
@@ -91,9 +91,9 @@
                             <span>Пятница</span>
                         </div>
                         <div class="wrap-info">
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
+                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="secondWeek.friday.firstDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="secondWeek.friday.secondDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="secondWeek.friday.thirdDay" max="1000"></div>
                         </div>
                     </div>
                 </div>
@@ -136,9 +136,9 @@
                             <span>Понедельник</span>
                         </div>
                         <div class="wrap-info">
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
+                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="thirdWeek.monday.firstDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="thirdWeek.monday.secondDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="thirdWeek.monday.thirdDay" max="1000"></div>
                         </div>
                     </div>
                 </div>
@@ -148,9 +148,9 @@
                             <span>Среда</span>
                         </div>
                         <div class="wrap-info">
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
+                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="thirdWeek.wednesday.firstDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="thirdWeek.wednesday.secondDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="thirdWeek.wednesday.thirdDay" max="1000"></div>
                         </div>
                     </div>
                 </div>
@@ -160,9 +160,9 @@
                             <span>Пятница</span>
                         </div>
                         <div class="wrap-info">
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
+                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="thirdWeek.friday.firstDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="thirdWeek.friday.secondDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="thirdWeek.friday.thirdDay" max="1000"></div>
                         </div>
                     </div>
                 </div>
@@ -205,9 +205,9 @@
                             <span>Понедельник</span>
                         </div>
                         <div class="wrap-info">
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
+                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="fourthWeek.monday.firstDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="fourthWeek.monday.secondDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="fourthWeek.monday.thirdDay" max="1000"></div>
                         </div>
                     </div>
                 </div>
@@ -217,9 +217,9 @@
                             <span>Среда</span>
                         </div>
                         <div class="wrap-info">
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
+                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="fourthWeek.wednesday.firstDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="fourthWeek.wednesday.secondDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="fourthWeek.wednesday.thirdDay" max="1000"></div>
                         </div>
                     </div>
                 </div>
@@ -229,9 +229,9 @@
                             <span>Пятница</span>
                         </div>
                         <div class="wrap-info">
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
-                            <div class="wrap-info__item">Подтягивание - <input type="number" max="1000"></div>
+                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="fourthWeek.friday.firstDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="fourthWeek.friday.secondDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="fourthWeek.friday.thirdDay" max="1000"></div>
                         </div>
                     </div>
                 </div>
@@ -382,9 +382,61 @@
                         secondDay: this.firstWeek.friday.secondDay,
                         thirdDay: this.firstWeek.friday.thirdDay
                     }
+                },
+                secondWeek: {
+                    monday: {
+                        firstDay: this.secondWeek.monday.firstDay,
+                        secondDay: this.secondWeek.monday.secondDay,
+                        thirdDay: this.secondWeek.monday.thirdDay
+                    },
+                    wednesday: {
+                        firstDay: this.secondWeek.wednesday.firstDay,
+                        secondDay: this.secondWeek.wednesday.secondDay,
+                        thirdDay: this.secondWeek.wednesday.thirdDay
+                    },
+                    friday: {
+                        firstDay: this.secondWeek.friday.firstDay,
+                        secondDay: this.secondWeek.friday.secondDay,
+                        thirdDay: this.secondWeek.friday.thirdDay
+                    }
+                },
+                thirdWeek: {
+                    monday: {
+                        firstDay: this.thirdWeek.monday.firstDay,
+                        secondDay: this.thirdWeek.monday.secondDay,
+                        thirdDay: this.thirdWeek.monday.thirdDay
+                    },
+                    wednesday: {
+                        firstDay: this.thirdWeek.wednesday.firstDay,
+                        secondDay: this.thirdWeek.wednesday.secondDay,
+                        thirdDay: this.thirdWeek.wednesday.thirdDay
+                    },
+                    friday: {
+                        firstDay: this.thirdWeek.friday.firstDay,
+                        secondDay: this.thirdWeek.friday.secondDay,
+                        thirdDay: this.thirdWeek.friday.thirdDay
+                    }
+                },
+                fourthWeek: {
+                    monday: {
+                        firstDay: this.fourthWeek.monday.firstDay,
+                        secondDay: this.fourthWeek.monday.secondDay,
+                        thirdDay: this.fourthWeek.monday.thirdDay
+                    },
+                    wednesday: {
+                        firstDay: this.fourthWeek.wednesday.firstDay,
+                        secondDay: this.fourthWeek.wednesday.secondDay,
+                        thirdDay: this.fourthWeek.wednesday.thirdDay
+                    },
+                    friday: {
+                        firstDay: this.fourthWeek.friday.firstDay,
+                        secondDay: this.fourthWeek.friday.secondDay,
+                        thirdDay: this.fourthWeek.friday.thirdDay
+                    }
                 }
             }
             console.log(obj);
+            this.$router.push('/list')
         }
     }
   }
