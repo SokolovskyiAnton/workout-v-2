@@ -353,7 +353,7 @@
     props: ['names'],
     methods: {
         
-        createTable() {
+        async createTable() {
             const obj = {
                 blocks: {
                     firstStep: this.firstStep,
@@ -435,8 +435,10 @@
                     }
                 }
             }
-            console.log(obj);
-            this.$router.push('/list')
+            try {
+                await this.$store.dispatch('createTable', obj)
+                this.$router.push('/list')
+            } catch (e) {}
         }
     }
   }
