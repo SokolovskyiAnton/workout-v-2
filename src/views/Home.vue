@@ -1,25 +1,29 @@
 <template>
   <b-container>
-    <Table @create="createTable"/>
+    <SelectType v-show="step === 1" @selected="selected"/>
+    <HomeTable v-show="step === 2" :names="namesObj"/>
   </b-container>
 </template>
 
 <script>
-import Table from '../components/Table'
+import SelectType from '../components/SelectType'
+import HomeTable from '../components/HomeTable'
   export default {
     data() {
       return {
-        
+        step: 1,
+        namesObj: {}
       }
     },
     methods: {
-      createTable(data) {
-        
+      selected(select) {
+        this.step = select.step
+        this.namesObj = select.names
       }
     },
     components: {
-      Table
-    }
+      HomeTable,SelectType
+    },
   }
 </script>
 
