@@ -14,6 +14,24 @@
             &:nth-child(4)
                 border: none
 
+.add
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 150px
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+    &-block
+        &__svg
+            rect
+                stroke: rgba(0, 0, 0, 0.3)
+            &:hover
+                rect
+                    stroke: gray
+                    cursor: pointer
+                    fill: rgba(0, 255 , 0, 0.3)
+                line
+                    stroke: gray
+
 .wrap
     &-title
         text-align: center
@@ -57,4 +75,5 @@
                 border: none
                 
 
-            
+.hidden 
+    display: none        
