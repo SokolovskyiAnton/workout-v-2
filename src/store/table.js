@@ -22,6 +22,30 @@ export default {
                 commit('setError', e)
                 throw e
             }
+        },
+
+        async fetchTableById({dispatch, commit}, id) {
+            try {
+                const uid = await dispatch('getUid')
+                const table = (await firebase.database().ref(`/users/${uid}/tables`).child(id).once('value')).val() || {}
+                return {
+                    ...table,
+                    id
+                }
+            } catch (e) {
+                commit('setError', e)
+                throw e
+            }
+        },
+
+        async updateTable({dispatch, commit}, {data, id}) {
+            try {
+                const uid = await dispatch('getUid')
+                await firebase.database().ref(`/users/${uid}/tables`).child(id).update(data)
+            } catch (e) {
+                commit('setError', e)
+                throw e
+            }
         }
     }
 }

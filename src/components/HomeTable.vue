@@ -355,6 +355,7 @@
         
         async createTable() {
             const obj = {
+                date: new Date().toJSON(),
                 blocks: {
                     firstStep: this.firstStep,
                     secondStep: this.secondStep,
@@ -366,7 +367,6 @@
                     thirdExercise: this.names.thirdName
                 },
                 firstWeek: {
-                    date: new Date().toJSON(),
                     monday: {
                         firstExse: this.firstWeek.monday.firstExse,
                         secondExse: this.firstWeek.monday.secondExse,

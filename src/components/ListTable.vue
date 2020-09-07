@@ -1,6 +1,6 @@
 <template>
     <div class="list mt-5 text-center">
-        <h3>{{obj.firstWeek.date | date}}</h3>
+        <h3>{{obj.date | date}}</h3>
         <div class="table">
             <div class="table-block">
                 <div class="table-block-items">
@@ -269,7 +269,7 @@
             </div>
         </div>
         <div class="button">
-            <b-button class="button-submit" variant="outline-primary">Изменить</b-button>
+            <b-button @click="$router.push('/month/' + obj.id)" class="button-submit" variant="outline-primary">Изменить</b-button>
         </div>
   </div>
 </template>

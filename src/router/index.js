@@ -18,10 +18,10 @@ Vue.use(VueRouter)
       component: () => import('../views/List.vue')
     },
     {
-      path: '/week/:id',
-      name: 'Week',
+      path: '/month/:id',
+      name: 'Month',
       meta: {layout: 'main'},
-      component: () => import('../views/Week.vue')
+      component: () => import('../views/Month.vue')
     },
     {
       path: '/analytics',
