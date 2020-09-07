@@ -10,6 +10,18 @@ export default {
                 commit('setError', e)
                 throw e
             }
+        },
+
+        async fetchTables({dispatch, commit}) {
+            try {
+                const uid = await dispatch('getUid')
+                const tables = (await firebase.database().ref(`/users/${uid}/tables`).once('value')).val() || {}
+            
+                return Object.keys(tables).map(key => ({...tables[key], id: key}))
+            } catch (e) {
+                commit('setError', e)
+                throw e
+            }
         }
     }
 }

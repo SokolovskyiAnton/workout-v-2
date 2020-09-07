@@ -43,17 +43,17 @@
                     <div class="count-item">
                         <div class="count-item__title">Неделя</div>
                         <div class="count-info">
-                            <div class="count-info__item">100</div>
-                            <div class="count-info__item">100</div>
-                            <div class="count-info__item">100</div>
+                            <div class="count-info__item">0</div>
+                            <div class="count-info__item">0</div>
+                            <div class="count-info__item">0</div>
                     </div>
                     </div>
                     <div class="count-item">
                         <div class="count-item__title">Месяц</div>
                         <div class="count-info">
-                            <div class="count-info__item">100</div>
-                            <div class="count-info__item">200</div>
-                            <div class="count-info__item">300</div>
+                            <div class="count-info__item">0</div>
+                            <div class="count-info__item">0</div>
+                            <div class="count-info__item">0</div>
                     </div>
                     </div>
                 </div>
@@ -102,17 +102,17 @@
                         <div class="count-item">
                             <div class="count-item__title">Неделя</div>
                             <div class="count-info">
-                                <div class="count-info__item">900</div>
                                 <div class="count-info__item">0</div>
-                                <div class="count-info__item">300</div>
+                                <div class="count-info__item">0</div>
+                                <div class="count-info__item">0</div>
                         </div>
                         </div>
                         <div class="count-item">
                             <div class="count-item__title">Месяц</div>
                             <div class="count-info">
-                                <div class="count-info__item">1000</div>
-                                <div class="count-info__item">200</div>
-                                <div class="count-info__item">300</div>
+                                <div class="count-info__item">0</div>
+                                <div class="count-info__item">0</div>
+                                <div class="count-info__item">0</div>
                         </div>
                         </div>
                     </div>
@@ -171,17 +171,17 @@
                         <div class="count-item">
                             <div class="count-item__title">Неделя</div>
                             <div class="count-info">
-                                <div class="count-info__item">900</div>
                                 <div class="count-info__item">0</div>
-                                <div class="count-info__item">300</div>
+                                <div class="count-info__item">0</div>
+                                <div class="count-info__item">0</div>
                         </div>
                         </div>
                         <div class="count-item">
                             <div class="count-item__title">Месяц</div>
                             <div class="count-info">
-                                <div class="count-info__item">1000</div>
-                                <div class="count-info__item">200</div>
-                                <div class="count-info__item">300</div>
+                                <div class="count-info__item">0</div>
+                                <div class="count-info__item">0</div>
+                                <div class="count-info__item">0</div>
                         </div>
                         </div>
                     </div>
@@ -240,17 +240,17 @@
                         <div class="count-item">
                             <div class="count-item__title">Неделя</div>
                             <div class="count-info">
-                                <div class="count-info__item">900</div>
                                 <div class="count-info__item">0</div>
-                                <div class="count-info__item">300</div>
+                                <div class="count-info__item">0</div>
+                                <div class="count-info__item">0</div>
                         </div>
                         </div>
                         <div class="count-item">
                             <div class="count-item__title">Месяц</div>
                             <div class="count-info">
-                                <div class="count-info__item">1000</div>
-                                <div class="count-info__item">200</div>
-                                <div class="count-info__item">300</div>
+                                <div class="count-info__item">0</div>
+                                <div class="count-info__item">0</div>
+                                <div class="count-info__item">0</div>
                         </div>
                         </div>
                     </div>
