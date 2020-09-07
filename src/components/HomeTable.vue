@@ -8,9 +8,9 @@
                         <span>Понедельник</span>
                     </div>
                     <div class="wrap-info">
-                        <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="firstWeek.monday.firstDay" max="1000"></div>
-                        <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="firstWeek.monday.secondDay" max="1000"></div>
-                        <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="firstWeek.monday.thirdDay" max="1000"></div>
+                        <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="firstWeek.monday.firstExse" max="1000" min="0"></div>
+                        <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="firstWeek.monday.secondExse" max="1000" min="0"></div>
+                        <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="firstWeek.monday.thirdExse" max="1000" min="0"></div>
                     </div>
                 </div>
             </div>
@@ -20,9 +20,9 @@
                         <span>Среда</span>
                     </div>
                     <div class="wrap-info">
-                        <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="firstWeek.wednesday.firstDay" max="1000"></div>
-                        <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="firstWeek.wednesday.secondDay" max="1000"></div>
-                        <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="firstWeek.wednesday.thirdDay" max="1000"></div>
+                        <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="firstWeek.wednesday.firstExse" max="1000" min="0"></div>
+                        <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="firstWeek.wednesday.secondExse" max="1000" min="0"></div>
+                        <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="firstWeek.wednesday.thirdExse" max="1000" min="0"></div>
                     </div>
                 </div>
             </div>
@@ -32,9 +32,9 @@
                         <span>Пятница</span>
                     </div>
                     <div class="wrap-info">
-                        <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="firstWeek.friday.firstDay" max="1000"></div>
-                        <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="firstWeek.friday.secondDay" max="1000"></div>
-                        <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="firstWeek.friday.thirdDay" max="1000"></div>
+                        <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="firstWeek.friday.firstExse" max="1000" min="0"></div>
+                        <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="firstWeek.friday.secondExse" max="1000" min="0"></div>
+                        <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="firstWeek.friday.thirdExse" max="1000" min="0"></div>
                     </div>
                 </div>
             </div>
@@ -67,9 +67,9 @@
                             <span>Понедельник</span>
                         </div>
                         <div class="wrap-info">
-                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="secondWeek.monday.firstDay" max="1000"></div>
-                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="secondWeek.monday.secondDay" max="1000"></div>
-                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="secondWeek.monday.thirdDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="secondWeek.monday.firstExse" max="1000" min="0"></div>
+                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="secondWeek.monday.secondExse" max="1000" min="0"></div>
+                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="secondWeek.monday.thirdExse" max="1000" min="0"></div>
                         </div>
                     </div>
                 </div>
@@ -79,9 +79,9 @@
                             <span>Среда</span>
                         </div>
                         <div class="wrap-info">
-                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="secondWeek.wednesday.firstDay" max="1000"></div>
-                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="secondWeek.wednesday.secondDay" max="1000"></div>
-                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="secondWeek.wednesday.thirdDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="secondWeek.wednesday.firstExse" max="1000" min="0"></div>
+                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="secondWeek.wednesday.secondExse" max="1000" min="0"></div>
+                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="secondWeek.wednesday.thirdExse" max="1000" min="0"></div>
                         </div>
                     </div>
                 </div>
@@ -91,9 +91,9 @@
                             <span>Пятница</span>
                         </div>
                         <div class="wrap-info">
-                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="secondWeek.friday.firstDay" max="1000"></div>
-                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="secondWeek.friday.secondDay" max="1000"></div>
-                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="secondWeek.friday.thirdDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="secondWeek.friday.firstExse" max="1000" min="0"></div>
+                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="secondWeek.friday.secondExse" max="1000" min="0"></div>
+                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="secondWeek.friday.thirdExse" max="1000" min="0"></div>
                         </div>
                     </div>
                 </div>
@@ -136,9 +136,9 @@
                             <span>Понедельник</span>
                         </div>
                         <div class="wrap-info">
-                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="thirdWeek.monday.firstDay" max="1000"></div>
-                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="thirdWeek.monday.secondDay" max="1000"></div>
-                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="thirdWeek.monday.thirdDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="thirdWeek.monday.firstExse" max="1000" min="0"></div>
+                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="thirdWeek.monday.secondExse" max="1000" min="0"></div>
+                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="thirdWeek.monday.thirdExse" max="1000" min="0"></div>
                         </div>
                     </div>
                 </div>
@@ -148,9 +148,9 @@
                             <span>Среда</span>
                         </div>
                         <div class="wrap-info">
-                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="thirdWeek.wednesday.firstDay" max="1000"></div>
-                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="thirdWeek.wednesday.secondDay" max="1000"></div>
-                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="thirdWeek.wednesday.thirdDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="thirdWeek.wednesday.firstExse" max="1000" min="0"></div>
+                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="thirdWeek.wednesday.secondExse" max="1000" min="0"></div>
+                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="thirdWeek.wednesday.thirdExse" max="1000" min="0"></div>
                         </div>
                     </div>
                 </div>
@@ -160,9 +160,9 @@
                             <span>Пятница</span>
                         </div>
                         <div class="wrap-info">
-                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="thirdWeek.friday.firstDay" max="1000"></div>
-                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="thirdWeek.friday.secondDay" max="1000"></div>
-                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="thirdWeek.friday.thirdDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="thirdWeek.friday.firstExse" max="1000" min="0"></div>
+                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="thirdWeek.friday.secondExse" max="1000" min="0"></div>
+                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="thirdWeek.friday.thirdExse" max="1000" min="0"></div>
                         </div>
                     </div>
                 </div>
@@ -205,9 +205,9 @@
                             <span>Понедельник</span>
                         </div>
                         <div class="wrap-info">
-                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="fourthWeek.monday.firstDay" max="1000"></div>
-                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="fourthWeek.monday.secondDay" max="1000"></div>
-                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="fourthWeek.monday.thirdDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="fourthWeek.monday.firstExse" max="1000" min="0"></div>
+                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="fourthWeek.monday.secondExse" max="1000" min="0"></div>
+                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="fourthWeek.monday.thirdExse" max="1000" min="0"></div>
                         </div>
                     </div>
                 </div>
@@ -217,9 +217,9 @@
                             <span>Среда</span>
                         </div>
                         <div class="wrap-info">
-                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="fourthWeek.wednesday.firstDay" max="1000"></div>
-                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="fourthWeek.wednesday.secondDay" max="1000"></div>
-                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="fourthWeek.wednesday.thirdDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="fourthWeek.wednesday.firstExse" max="1000" min="0"></div>
+                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="fourthWeek.wednesday.secondExse" max="1000" min="0"></div>
+                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="fourthWeek.wednesday.thirdExse" max="1000" min="0"></div>
                         </div>
                     </div>
                 </div>
@@ -229,9 +229,9 @@
                             <span>Пятница</span>
                         </div>
                         <div class="wrap-info">
-                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="fourthWeek.friday.firstDay" max="1000"></div>
-                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="fourthWeek.friday.secondDay" max="1000"></div>
-                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="fourthWeek.friday.thirdDay" max="1000"></div>
+                            <div class="wrap-info__item">{{names.firstName}} - <input type="number" v-model="fourthWeek.friday.firstExse" max="1000" min="0"></div>
+                            <div class="wrap-info__item">{{names.secondName}} - <input type="number" v-model="fourthWeek.friday.secondExse" max="1000" min="0"></div>
+                            <div class="wrap-info__item">{{names.thirdName}} - <input type="number" v-model="fourthWeek.friday.thirdExse" max="1000" min="0"></div>
                         </div>
                     </div>
                 </div>
@@ -279,70 +279,70 @@
       return {
         firstWeek: {
             monday: {
-                firstDay: 0,
-                secondDay: 0,
-                thirdDay: 0
+                firstExse: 0,
+                secondExse: 0,
+                thirdExse: 0
             },
             wednesday: {
-                firstDay: 0,
-                secondDay: 0,
-                thirdDay: 0
+                firstExse: 0,
+                secondExse: 0,
+                thirdExse: 0
             },
             friday: {
-                firstDay: 0,
-                secondDay: 0,
-                thirdDay: 0
+                firstExse: 0,
+                secondExse: 0,
+                thirdExse: 0
             }
         },
         secondWeek: {
             monday: {
-                firstDay: 0,
-                secondDay: 0,
-                thirdDay: 0
+                firstExse: 0,
+                secondExse: 0,
+                thirdExse: 0
             },
             wednesday: {
-                firstDay: 0,
-                secondDay: 0,
-                thirdDay: 0
+                firstExse: 0,
+                secondExse: 0,
+                thirdExse: 0
             },
             friday: {
-                firstDay: 0,
-                secondDay: 0,
-                thirdDay: 0
+                firstExse: 0,
+                secondExse: 0,
+                thirdExse: 0
             }
         },
         thirdWeek: {
             monday: {
-                firstDay: 0,
-                secondDay: 0,
-                thirdDay: 0
+                firstExse: 0,
+                secondExse: 0,
+                thirdExse: 0
             },
             wednesday: {
-                firstDay: 0,
-                secondDay: 0,
-                thirdDay: 0
+                firstExse: 0,
+                secondExse: 0,
+                thirdExse: 0
             },
             friday: {
-                firstDay: 0,
-                secondDay: 0,
-                thirdDay: 0
+                firstExse: 0,
+                secondExse: 0,
+                thirdExse: 0
             }
         },
         fourthWeek: {
             monday: {
-                firstDay: 0,
-                secondDay: 0,
-                thirdDay: 0
+                firstExse: 0,
+                secondExse: 0,
+                thirdExse: 0
             },
             wednesday: {
-                firstDay: 0,
-                secondDay: 0,
-                thirdDay: 0
+                firstExse: 0,
+                secondExse: 0,
+                thirdExse: 0
             },
             friday: {
-                firstDay: 0,
-                secondDay: 0,
-                thirdDay: 0
+                firstExse: 0,
+                secondExse: 0,
+                thirdExse: 0
             }
         },
         firstStep: false,
@@ -368,70 +368,70 @@
                 firstWeek: {
                     date: new Date().toJSON(),
                     monday: {
-                        firstDay: this.firstWeek.monday.firstDay,
-                        secondDay: this.firstWeek.monday.secondDay,
-                        thirdDay: this.firstWeek.monday.thirdDay
+                        firstExse: this.firstWeek.monday.firstExse,
+                        secondExse: this.firstWeek.monday.secondExse,
+                        thirdExse: this.firstWeek.monday.thirdExse
                     },
                     wednesday: {
-                        firstDay: this.firstWeek.wednesday.firstDay,
-                        secondDay: this.firstWeek.wednesday.secondDay,
-                        thirdDay: this.firstWeek.wednesday.thirdDay
+                        firstExse: this.firstWeek.wednesday.firstExse,
+                        secondExse: this.firstWeek.wednesday.secondExse,
+                        thirdExse: this.firstWeek.wednesday.thirdExse
                     },
                     friday: {
-                        firstDay: this.firstWeek.friday.firstDay,
-                        secondDay: this.firstWeek.friday.secondDay,
-                        thirdDay: this.firstWeek.friday.thirdDay
+                        firstExse: this.firstWeek.friday.firstExse,
+                        secondExse: this.firstWeek.friday.secondExse,
+                        thirdExse: this.firstWeek.friday.thirdExse
                     }
                 },
                 secondWeek: {
                     monday: {
-                        firstDay: this.secondWeek.monday.firstDay,
-                        secondDay: this.secondWeek.monday.secondDay,
-                        thirdDay: this.secondWeek.monday.thirdDay
+                        firstExse: this.secondWeek.monday.firstExse,
+                        secondExse: this.secondWeek.monday.secondExse,
+                        thirdExse: this.secondWeek.monday.thirdExse
                     },
                     wednesday: {
-                        firstDay: this.secondWeek.wednesday.firstDay,
-                        secondDay: this.secondWeek.wednesday.secondDay,
-                        thirdDay: this.secondWeek.wednesday.thirdDay
+                        firstExse: this.secondWeek.wednesday.firstExse,
+                        secondExse: this.secondWeek.wednesday.secondExse,
+                        thirdExse: this.secondWeek.wednesday.thirdExse
                     },
                     friday: {
-                        firstDay: this.secondWeek.friday.firstDay,
-                        secondDay: this.secondWeek.friday.secondDay,
-                        thirdDay: this.secondWeek.friday.thirdDay
+                        firstExse: this.secondWeek.friday.firstExse,
+                        secondExse: this.secondWeek.friday.secondExse,
+                        thirdExse: this.secondWeek.friday.thirdExse
                     }
                 },
                 thirdWeek: {
                     monday: {
-                        firstDay: this.thirdWeek.monday.firstDay,
-                        secondDay: this.thirdWeek.monday.secondDay,
-                        thirdDay: this.thirdWeek.monday.thirdDay
+                        firstExse: this.thirdWeek.monday.firstExse,
+                        secondExse: this.thirdWeek.monday.secondExse,
+                        thirdExse: this.thirdWeek.monday.thirdExse
                     },
                     wednesday: {
-                        firstDay: this.thirdWeek.wednesday.firstDay,
-                        secondDay: this.thirdWeek.wednesday.secondDay,
-                        thirdDay: this.thirdWeek.wednesday.thirdDay
+                        firstExse: this.thirdWeek.wednesday.firstExse,
+                        secondExse: this.thirdWeek.wednesday.secondExse,
+                        thirdExse: this.thirdWeek.wednesday.thirdExse
                     },
                     friday: {
-                        firstDay: this.thirdWeek.friday.firstDay,
-                        secondDay: this.thirdWeek.friday.secondDay,
-                        thirdDay: this.thirdWeek.friday.thirdDay
+                        firstExse: this.thirdWeek.friday.firstExse,
+                        secondExse: this.thirdWeek.friday.secondExse,
+                        thirdExse: this.thirdWeek.friday.thirdExse
                     }
                 },
                 fourthWeek: {
                     monday: {
-                        firstDay: this.fourthWeek.monday.firstDay,
-                        secondDay: this.fourthWeek.monday.secondDay,
-                        thirdDay: this.fourthWeek.monday.thirdDay
+                        firstExse: this.fourthWeek.monday.firstExse,
+                        secondExse: this.fourthWeek.monday.secondExse,
+                        thirdExse: this.fourthWeek.monday.thirdExse
                     },
                     wednesday: {
-                        firstDay: this.fourthWeek.wednesday.firstDay,
-                        secondDay: this.fourthWeek.wednesday.secondDay,
-                        thirdDay: this.fourthWeek.wednesday.thirdDay
+                        firstExse: this.fourthWeek.wednesday.firstExse,
+                        secondExse: this.fourthWeek.wednesday.secondExse,
+                        thirdExse: this.fourthWeek.wednesday.thirdExse
                     },
                     friday: {
-                        firstDay: this.fourthWeek.friday.firstDay,
-                        secondDay: this.fourthWeek.friday.secondDay,
-                        thirdDay: this.fourthWeek.friday.thirdDay
+                        firstExse: this.fourthWeek.friday.firstExse,
+                        secondExse: this.fourthWeek.friday.secondExse,
+                        thirdExse: this.fourthWeek.friday.thirdExse
                     }
                 }
             }

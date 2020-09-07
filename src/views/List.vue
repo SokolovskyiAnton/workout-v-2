@@ -1,7 +1,8 @@
 <template>
   <div>
     <Spinner v-if="spinner"/>
-    <b-container>
+    <p v-else-if="!tables.length" class="text-center mt-5"> Здесь пока ничего нет...</p>
+    <b-container v-else>
       <div v-for="table in tables" :key="table.id">
         <ListTable :obj="table"/>
       </div>
