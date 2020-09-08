@@ -45,18 +45,18 @@
                     <div class="count-item">
                         <div class="count-item__title">Неделя</div>
                         <div class="count-info">
-                            <div class="count-info__item">0</div>
-                            <div class="count-info__item">0</div>
-                            <div class="count-info__item">0</div>
+                            <div class="count-info__item">{{sumFirstWeek.firstExercise}}</div>
+                            <div class="count-info__item">{{sumFirstWeek.secondExercise}}</div>
+                            <div class="count-info__item">{{sumFirstWeek.thirdExercise}}</div>
                     </div>
                     </div>
                     <div class="count-item">
                         <div class="count-item__title">Месяц</div>
                         <div class="count-info">
-                            <div class="count-info__item">0</div>
-                            <div class="count-info__item">0</div>
-                            <div class="count-info__item">0</div>
-                    </div>
+                            <div class="count-info__item">{{sumMonth.sumMonthFirstExse}}</div>
+                            <div class="count-info__item">{{sumMonth.sumMonthSecondExse}}</div>
+                            <div class="count-info__item">{{sumMonth.sumMonthThirdExse}}</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -104,18 +104,18 @@
                         <div class="count-item">
                             <div class="count-item__title">Неделя</div>
                             <div class="count-info">
-                                <div class="count-info__item">0</div>
-                                <div class="count-info__item">0</div>
-                                <div class="count-info__item">0</div>
-                        </div>
+                                <div class="count-info__item">{{sumSecondWeek.firstExercise}}</div>
+                                <div class="count-info__item">{{sumSecondWeek.secondExercise}}</div>
+                                <div class="count-info__item">{{sumSecondWeek.thirdExercise}}</div>
+                            </div>
                         </div>
                         <div class="count-item">
                             <div class="count-item__title">Месяц</div>
                             <div class="count-info">
-                                <div class="count-info__item">0</div>
-                                <div class="count-info__item">0</div>
-                                <div class="count-info__item">0</div>
-                        </div>
+                                <div class="count-info__item">{{sumMonth.sumMonthFirstExse}}</div>
+                                <div class="count-info__item">{{sumMonth.sumMonthSecondExse}}</div>
+                                <div class="count-info__item">{{sumMonth.sumMonthThirdExse}}</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -173,18 +173,18 @@
                         <div class="count-item">
                             <div class="count-item__title">Неделя</div>
                             <div class="count-info">
-                                <div class="count-info__item">0</div>
-                                <div class="count-info__item">0</div>
-                                <div class="count-info__item">0</div>
-                        </div>
+                                <div class="count-info__item">{{sumThirdWeek.firstExercise}}</div>
+                                <div class="count-info__item">{{sumThirdWeek.secondExercise}}</div>
+                                <div class="count-info__item">{{sumThirdWeek.thirdExercise}}</div>
+                            </div>
                         </div>
                         <div class="count-item">
                             <div class="count-item__title">Месяц</div>
                             <div class="count-info">
-                                <div class="count-info__item">0</div>
-                                <div class="count-info__item">0</div>
-                                <div class="count-info__item">0</div>
-                        </div>
+                                <div class="count-info__item">{{sumMonth.sumMonthFirstExse}}</div>
+                                <div class="count-info__item">{{sumMonth.sumMonthSecondExse}}</div>
+                                <div class="count-info__item">{{sumMonth.sumMonthThirdExse}}</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -242,18 +242,18 @@
                         <div class="count-item">
                             <div class="count-item__title">Неделя</div>
                             <div class="count-info">
-                                <div class="count-info__item">0</div>
-                                <div class="count-info__item">0</div>
-                                <div class="count-info__item">0</div>
-                        </div>
+                                <div class="count-info__item">{{sumFourthWeek.firstExercise}}</div>
+                                <div class="count-info__item">{{sumFourthWeek.secondExercise}}</div>
+                                <div class="count-info__item">{{sumFourthWeek.thirdExercise}}</div>
+                            </div>
                         </div>
                         <div class="count-item">
                             <div class="count-item__title">Месяц</div>
                             <div class="count-info">
-                                <div class="count-info__item">0</div>
-                                <div class="count-info__item">0</div>
-                                <div class="count-info__item">0</div>
-                        </div>
+                                <div class="count-info__item">{{sumMonth.sumMonthFirstExse}}</div>
+                                <div class="count-info__item">{{sumMonth.sumMonthSecondExse}}</div>
+                                <div class="count-info__item">{{sumMonth.sumMonthThirdExse}}</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -282,7 +282,6 @@
     data() {
       return {
         spinner: true,
-        id: null,
         firstWeek: {
             monday: {
                 firstExse: 0,
@@ -366,7 +365,6 @@
     async mounted() {
       const id = this.$route.params.id
       const table = await this.$store.dispatch('fetchTableById', id)
-      this.id = table.id
       this.names = {
         firstExercise: table.names.firstExercise,
         secondExercise: table.names.secondExercise,
@@ -541,6 +539,63 @@
       }
 
       
+    },
+    computed: {
+         sumFirstWeek() {
+            const firstExercise = +this.firstWeek.monday.firstExse + +this.firstWeek.wednesday.firstExse + +this.firstWeek.friday.firstExse
+            const secondExercise = +this.firstWeek.monday.secondExse + +this.firstWeek.wednesday.secondExse + +this.firstWeek.friday.secondExse
+            const thirdExercise = +this.firstWeek.monday.thirdExse + +this.firstWeek.wednesday.thirdExse + +this.firstWeek.friday.thirdExse
+            
+            return {
+                firstExercise,
+                secondExercise,
+                thirdExercise
+            }
+        },
+        sumSecondWeek() {
+            const firstExercise = +this.secondWeek.monday.firstExse + +this.secondWeek.wednesday.firstExse + +this.secondWeek.friday.firstExse
+            const secondExercise = +this.secondWeek.monday.secondExse + +this.secondWeek.wednesday.secondExse + +this.secondWeek.friday.secondExse
+            const thirdExercise = +this.secondWeek.monday.thirdExse + +this.secondWeek.wednesday.thirdExse + +this.secondWeek.friday.thirdExse
+            
+            return {
+                firstExercise,
+                secondExercise,
+                thirdExercise
+            }
+        },
+        sumThirdWeek() {
+            const firstExercise = +this.thirdWeek.monday.firstExse + +this.thirdWeek.wednesday.firstExse + +this.thirdWeek.friday.firstExse
+            const secondExercise = +this.thirdWeek.monday.secondExse + +this.thirdWeek.wednesday.secondExse + +this.thirdWeek.friday.secondExse
+            const thirdExercise = +this.thirdWeek.monday.thirdExse + +this.thirdWeek.wednesday.thirdExse + +this.thirdWeek.friday.thirdExse
+            
+            return {
+                firstExercise,
+                secondExercise,
+                thirdExercise
+            }
+        },
+        sumFourthWeek() {
+            const firstExercise = +this.fourthWeek.monday.firstExse + +this.fourthWeek.wednesday.firstExse + +this.fourthWeek.friday.firstExse
+            const secondExercise = +this.fourthWeek.monday.secondExse + +this.fourthWeek.wednesday.secondExse + +this.fourthWeek.friday.secondExse
+            const thirdExercise = +this.fourthWeek.monday.thirdExse + +this.fourthWeek.wednesday.thirdExse + +this.fourthWeek.friday.thirdExse
+            
+            return {
+                firstExercise,
+                secondExercise,
+                thirdExercise
+            }
+        },
+        sumMonth() {
+            const sumMonthFirstExse = this.sumFirstWeek.firstExercise + this.sumSecondWeek.firstExercise + this.sumThirdWeek.firstExercise + this.sumFourthWeek.firstExercise
+            const sumMonthSecondExse = this.sumFirstWeek.secondExercise + this.sumSecondWeek.secondExercise + this.sumThirdWeek.secondExercise + this.sumFourthWeek.secondExercise
+            const sumMonthThirdExse = this.sumFirstWeek.thirdExercise + this.sumSecondWeek.thirdExercise + this.sumThirdWeek.thirdExercise + this.sumFourthWeek.thirdExercise
+
+            return {
+                sumMonthFirstExse,
+                sumMonthSecondExse,
+                sumMonthThirdExse
+            }
+        }
     }
   }
 </script>
