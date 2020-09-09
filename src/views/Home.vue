@@ -15,6 +15,9 @@ import HomeTable from '../components/HomeTable'
         namesObj: {}
       }
     },
+    metaInfo: {
+      title: 'Home | Workout'
+    },
     methods: {
       selected(select) {
         this.step = select.step

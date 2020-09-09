@@ -4,19 +4,12 @@
     <p v-else-if="!tables.length" class="text-center mt-5"> Здесь пока ничего нет...</p>
     <b-container v-else>
 
-      <div v-for="table in lists" :key="table.id">
+      <div v-for="table in newList" :key="table.id">
         <ListTable :obj="table"/>
       </div>
       
-        
-      <b-pagination
-        v-model="currentPage"
-        :total-rows="rows"
-        :per-page="perPage"
-        align="center"
-        pills
-        class="mt-5"
-      ></b-pagination>
+      <b-pagination-nav pills class="mt-4" align="center" v-model="currentPage" :page="newList" :link-gen="linkGen" :number-of-pages="rows" use-router></b-pagination-nav>
+      
 
     </b-container>
   </div>
@@ -30,26 +23,33 @@
         spinner: true,
         tables: [],
         perPage: 2,
-        currentPage: 1
+        currentPage: 1,
+        rows: null
       }
     },
+    metaInfo: {
+      title: 'List | Workout'
+    },
     async mounted() {
-      this.tables = await this.$store.dispatch('fetchTables')
+      const tables = await this.$store.dispatch('fetchTables')
+      this.tables = tables.reverse()
+      this.rows = Math.ceil(tables.length / this.perPage)
       this.spinner = false
     },
     components: {
       ListTable
     },
     computed: {
-      lists() {
+      newList() {
         const items = this.tables
-        return items.slice(
-          (this.currentPage - 1) * this.perPage,
-          this.currentPage * this.perPage
-        )
-      },
-      rows() {
-        return this.tables.length
+        const newList = items.slice((this.currentPage - 1) * this.perPage,this.currentPage * this.perPage)
+        return newList
+      }
+    },
+    methods: {
+      linkGen(pageNum) {
+        const route = this.$route.path
+        return `${route}?page=${pageNum}`
       }
     }
   }

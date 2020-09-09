@@ -1,13 +1,18 @@
 <template>
-  <h1>TEst1</h1>
+  <b-container>
+    <h1>Hello</h1>
+  </b-container>
 </template>
 
 <script>
   export default {
     data() {
-      return {
-      }
+    return {
     }
+  },
+  metaInfo: {
+    title: 'Analytics | Workout'
+  }
   }
 </script>
 

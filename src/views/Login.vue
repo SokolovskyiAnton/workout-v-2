@@ -55,6 +55,9 @@ import messages from '../utils/messages'
           password: ''
       }
     },
+    metaInfo: {
+      title: 'Login | Workout'
+    },
     methods: {
         async onSubmit() {
           if (this.$v.$invalid) {

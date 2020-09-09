@@ -67,6 +67,9 @@ import { required, email, minLength } from 'vuelidate/lib/validators'
         name: ''
       }
     },
+    metaInfo: {
+      title: 'Registration | Workout'
+    },
     methods: {
         async onSubmit() {
           if (this.$v.$invalid) {

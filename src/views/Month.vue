@@ -594,6 +594,9 @@
                 sumMonthThirdExse
             }
         }
+    },
+    metaInfo: {
+      title: 'Month | Workout'
     }
   }
 </script>

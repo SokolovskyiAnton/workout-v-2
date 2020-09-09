@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import Vuelidate from 'vuelidate'
+import VueMeta from 'vue-meta'
 import { BootstrapVue } from 'bootstrap-vue'
 import messagePlugin from './utils/message.plugin'
 import Spinner from './components/Spinner.vue'
@@ -19,6 +20,7 @@ import 'firebase/database'
 Vue.use(BootstrapVue)
 Vue.use(Vuelidate)
 Vue.use(messagePlugin)
+Vue.use(VueMeta)
 Vue.filter('date', dateFilter)
 Vue.component('Spinner', Spinner)
 
