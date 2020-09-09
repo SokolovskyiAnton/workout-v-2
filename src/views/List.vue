@@ -3,9 +3,21 @@
     <Spinner v-if="spinner"/>
     <p v-else-if="!tables.length" class="text-center mt-5"> Здесь пока ничего нет...</p>
     <b-container v-else>
-      <div v-for="table in tables" :key="table.id">
+
+      <div v-for="table in lists" :key="table.id">
         <ListTable :obj="table"/>
       </div>
+      
+        
+      <b-pagination
+        v-model="currentPage"
+        :total-rows="rows"
+        :per-page="perPage"
+        align="center"
+        pills
+        class="mt-5"
+      ></b-pagination>
+
     </b-container>
   </div>
 </template>
@@ -16,7 +28,9 @@
     data() {
       return {
         spinner: true,
-        tables: []
+        tables: [],
+        perPage: 2,
+        currentPage: 1
       }
     },
     async mounted() {
@@ -25,6 +39,18 @@
     },
     components: {
       ListTable
+    },
+    computed: {
+      lists() {
+        const items = this.tables
+        return items.slice(
+          (this.currentPage - 1) * this.perPage,
+          this.currentPage * this.perPage
+        )
+      },
+      rows() {
+        return this.tables.length
+      }
     }
   }
 </script>

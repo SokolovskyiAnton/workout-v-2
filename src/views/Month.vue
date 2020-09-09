@@ -537,11 +537,9 @@
           throw e
         }
       }
-
-      
     },
     computed: {
-         sumFirstWeek() {
+        sumFirstWeek() {
             const firstExercise = +this.firstWeek.monday.firstExse + +this.firstWeek.wednesday.firstExse + +this.firstWeek.friday.firstExse
             const secondExercise = +this.firstWeek.monday.secondExse + +this.firstWeek.wednesday.secondExse + +this.firstWeek.friday.secondExse
             const thirdExercise = +this.firstWeek.monday.thirdExse + +this.firstWeek.wednesday.thirdExse + +this.firstWeek.friday.thirdExse
