@@ -7,11 +7,14 @@
 
 <script>
 import {Line} from 'vue-chartjs'
-  export default {
-    data() {
+import {NewLine} from '../charts/main.chart'
+import dateFilter from '@/filters/date.filter'
+export default {
+  data() {
     return {
       spinner: true,
-      tables: []
+      tables: [],
+      colors: ['red','blue','aqua', 'brown']
     }
   },
   extends: Line,
@@ -21,99 +24,69 @@ import {Line} from 'vue-chartjs'
   async mounted() {
     const tables = await this.$store.dispatch('fetchTables')
     this.tables = tables
-    this.renderChart({
-        labels: ["Июль","Август","Сентябрь","Октябрь","Ноябпь","Декабрь","Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь"],
-        datasets: [{
-          label: 'Подтягивания',
-          type: 'line',
-          data: tables.map(t => {
-            const fitstWeek = +t.firstWeek.monday.firstExse + +t.firstWeek.wednesday.firstExse + +t.firstWeek.friday.firstExse
-            const secondWeek = +t.secondWeek.monday.firstExse + +t.secondWeek.wednesday.firstExse + +t.secondWeek.friday.firstExse
-            const thirdWeek = +t.thirdWeek.monday.firstExse + +t.thirdWeek.wednesday.firstExse + +t.thirdWeek.friday.firstExse
-            const fourthWeek = +t.fourthWeek.monday.firstExse + +t.fourthWeek.wednesday.firstExse + +t.fourthWeek.friday.firstExse
-            return fitstWeek + secondWeek + thirdWeek +fourthWeek
-          }),
-          backgroundColor: [
-              'green'
-          ],
-          borderColor: [
-              'green'
-          ],
-          borderWidth: 1,
-          lineTension: 0.1,
-          fill: false,
-          borderCapStyle: 'butt',
-          borderDash: [],
-          borderDashOffset: 0.0,
-          borderJoinStyle: 'miter',
-          pointBorderColor: "green",
-          pointBackgroundColor: "#fff",
-          pointBorderWidth: 1,
-          pointRadius: 1,
-          pointHitRadius: 10
-        },
-        {
-          label: 'Брусья',
-          type: 'line',
-          data: tables.map(t => {
-            const fitstWeek = +t.firstWeek.monday.secondExse + +t.firstWeek.wednesday.secondExse + +t.firstWeek.friday.secondExse
-            const secondWeek = +t.secondWeek.monday.secondExse + +t.secondWeek.wednesday.secondExse + +t.secondWeek.friday.secondExse
-            const thirdWeek = +t.thirdWeek.monday.secondExse + +t.thirdWeek.wednesday.secondExse + +t.thirdWeek.friday.secondExse
-            const fourthWeek = +t.fourthWeek.monday.secondExse + +t.fourthWeek.wednesday.secondExse + +t.fourthWeek.friday.secondExse
-            return fitstWeek + secondWeek + thirdWeek +fourthWeek
-          }),
-          backgroundColor: [
-              'red'
-          ],
-          borderColor: [
-              'red'
-          ],
-          borderWidth: 1,
-          lineTension: 0.1,
-          fill: false,
-          borderCapStyle: 'butt',
-          borderDash: [],
-          borderDashOffset: 0.0,
-          borderJoinStyle: 'miter',
-          pointBorderColor: "red",
-          pointBackgroundColor: "#fff",
-          pointBorderWidth: 1,
-          pointRadius: 1,
-          pointHitRadius: 10
-        },
-        {
-          label: 'Приседания',
-          type: 'line',
-          data: tables.map(t => {
-            const fitstWeek = +t.firstWeek.monday.thirdExse + +t.firstWeek.wednesday.thirdExse + +t.firstWeek.friday.thirdExse
-            const secondWeek = +t.secondWeek.monday.thirdExse + +t.secondWeek.wednesday.thirdExse + +t.secondWeek.friday.thirdExse
-            const thirdWeek = +t.thirdWeek.monday.thirdExse + +t.thirdWeek.wednesday.thirdExse + +t.thirdWeek.friday.thirdExse
-            const fourthWeek = +t.fourthWeek.monday.thirdExse + +t.fourthWeek.wednesday.thirdExse + +t.fourthWeek.friday.thirdExse
-            return fitstWeek + secondWeek + thirdWeek +fourthWeek
-          }),
-          backgroundColor: [
-              'blue'
-          ],
-          borderColor: [
-              'blue'
-          ],
-          borderWidth: 1,
-          lineTension: 0.1,
-          fill: false,
-          borderCapStyle: 'butt',
-          borderDash: [],
-          borderDashOffset: 0.0,
-          borderJoinStyle: 'miter',
-          pointBorderColor: "blue",
-          pointBackgroundColor: "#fff",
-          pointBorderWidth: 1,
-          pointRadius: 1,
-          pointHitRadius: 10
+    this.renderChart({labels: this.lables, datasets: this.chart})
+    this.spinner = false  
+  },
+  computed: {
+    chart() {
+      const data = this.tables
+      const names = [] // массив названий упражнений
+      const arr = [] // массив классов
+      
+      for (let obj of data) {
+        const namesArray = Object.values(obj.names) // названия упражнений
+        const sumFirstExerciseOfMonth = function() {
+          const fitstWeek = +obj.firstWeek.monday.firstExse + +obj.firstWeek.wednesday.firstExse + +obj.firstWeek.friday.firstExse
+          const secondWeek = +obj.secondWeek.monday.firstExse + +obj.secondWeek.wednesday.firstExse + +obj.secondWeek.friday.firstExse
+          const thirdWeek = +obj.thirdWeek.monday.firstExse + +obj.thirdWeek.wednesday.firstExse + +obj.thirdWeek.friday.firstExse
+          const fourthWeek = +obj.fourthWeek.monday.firstExse + +obj.fourthWeek.wednesday.firstExse + +obj.fourthWeek.friday.firstExse
+          return fitstWeek + secondWeek + thirdWeek + fourthWeek
         }
-      ]
-        
-    })
-    this.spinner = false
+        const sumSecondExerciseOfMonth = function() {
+          const fitstWeek = +obj.firstWeek.monday.secondExse + +obj.firstWeek.wednesday.secondExse + +obj.firstWeek.friday.secondExse
+          const secondWeek = +obj.secondWeek.monday.secondExse + +obj.secondWeek.wednesday.secondExse + +obj.secondWeek.friday.secondExse
+          const thirdWeek = +obj.thirdWeek.monday.secondExse + +obj.thirdWeek.wednesday.secondExse + +obj.thirdWeek.friday.secondExse
+          const fourthWeek = +obj.fourthWeek.monday.secondExse + +obj.fourthWeek.wednesday.secondExse + +obj.fourthWeek.friday.secondExse
+          return fitstWeek + secondWeek + thirdWeek + fourthWeek
+        }
+        const sumThirdExerciseOfMonth = function() {
+          const fitstWeek = +obj.firstWeek.monday.thirdExse + +obj.firstWeek.wednesday.thirdExse + +obj.firstWeek.friday.thirdExse
+          const secondWeek = +obj.secondWeek.monday.thirdExse + +obj.secondWeek.wednesday.thirdExse + +obj.secondWeek.friday.thirdExse
+          const thirdWeek = +obj.thirdWeek.monday.thirdExse + +obj.thirdWeek.wednesday.thirdExse + +obj.thirdWeek.friday.thirdExse
+          const fourthWeek = +obj.fourthWeek.monday.thirdExse + +obj.fourthWeek.wednesday.thirdExse + +obj.fourthWeek.friday.thirdExse
+          return fitstWeek + secondWeek + thirdWeek + fourthWeek
+        }
+        const arrFunctions = [sumFirstExerciseOfMonth(),sumSecondExerciseOfMonth(),sumThirdExerciseOfMonth()]
+
+        for (let i = 0; i < namesArray.length; i++) {
+          const nameExercise = names.find(item => namesArray[i] === item)
+          if (nameExercise === undefined) {
+            names.push(namesArray[i])
+
+            const sum = [arrFunctions[i]]
+            function color() {
+              let color = '#' + Math.floor(Math.random() * 16777215).toString(16)
+              return color;
+            }
+            
+            arr.push(new NewLine(namesArray[i], this.colors[i], sum))
+
+          } else if (nameExercise) {
+            const itemName = arr.find(item => item.label === namesArray[i])
+
+            const sum = arrFunctions[i]
+
+            itemName.data.push(sum)
+
+          }
+        }
+      }
+      return arr
+    },
+    lables() {
+      const lables = ["Июль","Август","Сентябрь","Октябрь","Ноябпь","Декабрь","Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь"]
+      return lables
+    }
   }
 }
 </script>
