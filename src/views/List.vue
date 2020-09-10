@@ -42,8 +42,7 @@
     computed: {
       newList() {
         const items = this.tables
-        const newList = items.slice((this.currentPage - 1) * this.perPage,this.currentPage * this.perPage)
-        return newList
+        return items.slice((this.currentPage - 1) * this.perPage, this.currentPage * this.perPage)
       }
     },
     methods: {
