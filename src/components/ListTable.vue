@@ -1,6 +1,6 @@
 <template>
     <div class="list mt-5 text-center">
-        <h3>{{obj.date | date}}</h3>
+        <h3>{{obj.date | date('date')}}</h3>
         <div class="table">
             <div class="table-block">
                 <div class="table-block-items">

@@ -63,28 +63,24 @@ export default {
           if (nameExercise === undefined) {
             names.push(namesArray[i])
 
-            const sum = [arrFunctions[i]]
-            function color() {
-              let color = '#' + Math.floor(Math.random() * 16777215).toString(16)
-              return color;
-            }
-            
+            const sum = [{x: dateFilter(obj.date) ,y:arrFunctions[i]}]
+           
             arr.push(new NewLine(namesArray[i], this.colors[i], sum))
 
           } else if (nameExercise) {
             const itemName = arr.find(item => item.label === namesArray[i])
 
-            const sum = arrFunctions[i]
-
+            const sum = {x: dateFilter(obj.date) ,y:arrFunctions[i]}
+            
             itemName.data.push(sum)
-
           }
         }
       }
+      console.log(arr);
       return arr
     },
     lables() {
-      const lables = ["Июль","Август","Сентябрь","Октябрь","Ноябпь","Декабрь","Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь"]
+      const lables = ["Jul","Aug","Sept","Oct","Nov","Dec","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept"]
       return lables
     }
   }
